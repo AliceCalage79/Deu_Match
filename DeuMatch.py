@@ -25,30 +25,30 @@ def validaNotasUsuario (nota):
                 nota= input()
             return nota
     
-
 def buscaCandidato (notaMinima, listaPrincipal): 
     candidato=''
     contador = 0
     for x in range (0,len(listaPrincipal),1):
        palavra = listaPrincipal[x][1]
        nota =buscaNota(palavra)
-       if int(nota[0]) >= notaMinima[0]:
+       if int(nota[0]) >= int (notaMinima[0]):
          
-            if int(nota[1])>= notaMinima[1]:
+            if int(nota[1])>= int (notaMinima[1]):
              
-                if int(nota[2])>= notaMinima[2]:
+                if int(nota[2])>= int (notaMinima[2]):
                     
-                    if int(nota[3])>= notaMinima[3]:
-                        candidato =candidato +str(x+1)+ '.' +listaPrincipal[x][0]+'       '+listaPrincipal[x][1]+'\n'
+                    if int(nota[3])>= int(notaMinima[3]):
+                       
+                        candidato =candidato +str(x+1)+ '.' +listaPrincipal[x][0]+'     '+listaPrincipal[x][1]+'\n'
+                        candidato = candidato + '-'*30 +'\n'
                         contador = contador + 1
     if contador == 0:
-        print ('não ha candidato')
+        print ('Não há selecionados com esses critérios')
     else:
-        print ('='*30)
-        print ('Os selecionados são:\n')
+        print ('Resultado:')
+        print ('-'*30)
         print (candidato)
-
-
+   
 
 listaPrincipal = []
 listaCandidatos =[]
@@ -72,9 +72,9 @@ while inicio:
             nota = input()
             nota = validaNotasUsuario(nota)
             guardaNotas =  guardaNotas.replace('X',nota,1)
-            listaCandidatos.append(guardaNotas)
-            listaPrincipal.append(listaCandidatos)
-            listaCandidatos=[]
+        listaCandidatos.append(guardaNotas)
+        listaPrincipal.append(listaCandidatos)
+        listaCandidatos=[]
     cadastro =True
     while cadastro:
         print ('='*30)
@@ -82,8 +82,8 @@ while inicio:
         for i in range (1,numProcessos,1):
             print ('-'*30)
             print ('\nNota de '+(processoSeletivo(i))+':')
-            nota = input()
-            notaMinima.append(validaNotasUsuario(nota))
+            notaMin= input()
+            notaMinima.append(validaNotasUsuario (notaMin))
         buscaCandidato (notaMinima, listaPrincipal)
         print ('='*30)
         print ('Gostaria de voltar a consultar candidatos ou cadastrar novos: \n1.Consultar\n2.Cadastrar\n3.Sair')
@@ -92,6 +92,7 @@ while inicio:
             print('\n Opção Invalida digite novamente:  \n1.Consultar\n2.Cadastrar\n3.Sair')
             opcaofinal =input()
         if opcaofinal == '1':
+            notaMinima=[]
             cadastro = True
         elif opcaofinal =='2':
             cadastro =False
