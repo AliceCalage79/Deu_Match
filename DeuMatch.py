@@ -42,7 +42,6 @@ def buscaCandidato (notaMinima, listaPrincipal):
                 if int(nota[2])>= int (notaMinima[2]):
                     
                     if int(nota[3])>= int(notaMinima[3]):
-                       
                         candidato =candidato +str(x+1)+ '.' +listaPrincipal[x][0]+'     '+listaPrincipal[x][1]+'\n'
                         candidato = candidato + '-'*30 +'\n'
                         contador = contador + 1
