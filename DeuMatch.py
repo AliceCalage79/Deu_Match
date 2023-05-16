@@ -47,6 +47,7 @@ def buscaCandidato (notaMinima, listaPrincipal):
                         candidato = candidato + '-'*30 +'\n'
                         contador = contador + 1
     if contador == 0:
+        print ('-'*30)
         print ('Não há selecionados com esses critérios')
     else:
         print ('Resultado:')
@@ -102,9 +103,10 @@ while inicio:                                          # LAÇO QUE CONTROLA O CO
             print('\n Opção Invalida digite novamente:  \n1.Consultar\n2.Cadastrar\n3.Sair')
             opcaofinal =input()
         if opcaofinal == '1':                                            # DEIXA VAZIA A LISTA DA NOTA MINIMA PARA VOLTAR A CONSULTAR
-            notaMinima=[]
+            notaMinima = []
             consulta = True
         elif opcaofinal =='2':                                           # INICIO RECEBE TRUE  PARA VOLTAR A CADASTRAR CANDIDATOS
+            notaMinima = []
             consulta =False
             inicio == True
         elif opcaofinal == '3':                                          # OPÇÃO SAIR 
