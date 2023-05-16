@@ -2,7 +2,7 @@
 Projeto Individual -Modulo ll - Resilia
 ---
 
-Deu _Match, consiste em um projeto do curso de Análise de Dados, que visa  
+### Deu _Match, consiste em um projeto do curso de Análise de Dados, que visa  
 desenvolver um aplicativo que verifica a compatibilidade de um candidato 
 com uma vaga de acordo com seu resultado nas etapas do processo seletivo.
 Para isso foi criado um teste que devolve uma string no seguinte formato:
