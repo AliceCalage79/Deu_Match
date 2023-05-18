@@ -10,7 +10,7 @@ Projeto Individual -Modulo ll - Resilia
 ### uma das etapas do processo - entrevista, teste teórico, teste prático e
 ### avaliação de soft skills).
 ---
-## Funcionalidas
+## Funcionalidades
 - Cadastrar candidatos solicitando nome e notas nos respectivos processos;
 - Cadastra nota mínima em cada processo como critério para consulta;
 - Consulta os candidatos já cadastrados de acordo com a nota mínima que o 
