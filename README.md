@@ -12,8 +12,6 @@ Projeto Individual -Modulo ll - Resilia
 ---
 ## Funcionalidades
 - Cadastrar candidatos solicitando nome e notas nos respectivos processos;
-   "C:\Users\alice\Documents\GitHub\Deu_Match\DeuMatch_Projeto\foto1.jpg" 
-
 - Cadastra nota mínima em cada processo como critério para consulta;
 - Consulta os candidatos já cadastrados de acordo com a nota mínima que o 
   úsuario solicitar;
